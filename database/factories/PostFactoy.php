@@ -8,7 +8,7 @@ $factory->define(Post::class, function (Faker $faker) {
     return [
         'user_id' => $faker->numberBetween($min = 1, $max = 3),
         'title' => $title,
-        'slug' => str_replace(' ', '-', strtolower($title)),
+        'slug' => str_slug($title),
         'content' => "<p>".$faker->paragraph()."</p>"
     ];
 });
