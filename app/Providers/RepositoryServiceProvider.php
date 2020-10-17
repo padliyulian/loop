@@ -2,15 +2,13 @@
 
 namespace App\Providers;
 
-use App\Repositories\AuthInterface;
+use App\Repositories\PostInterface;
 use App\Repositories\UserInterface;
-use App\Repositories\AuthRepository;
-use App\Repositories\SkillInterface;
+use App\Repositories\PostRepository;
 use App\Repositories\UserRepository;
-use App\Repositories\SkillRepository;
-use App\Repositories\ActivityInterface;
+use App\Repositories\CommentInterface;
+use App\Repositories\CommentRepository;
 use Illuminate\Support\ServiceProvider;
-use App\Repositories\ActivityRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -22,8 +20,8 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            AuthInterface::class,
-            AuthRepository::class
+            PostInterface::class,
+            PostRepository::class
         );
 
         $this->app->bind(
@@ -32,13 +30,8 @@ class RepositoryServiceProvider extends ServiceProvider
         );
 
         $this->app->bind(
-            SkillInterface::class,
-            SkillRepository::class
-        );
-
-        $this->app->bind(
-            ActivityInterface::class,
-            ActivityRepository::class
+            CommentInterface::class,
+            CommentRepository::class
         );
     }
 

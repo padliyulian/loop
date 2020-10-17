@@ -2,7 +2,8 @@
 
 namespace App\Repositories;
 
-interface UserInterface
+interface PostInterface
 {
     public function list();
+    public function detail($post);
 }
