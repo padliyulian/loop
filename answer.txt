@@ -1,0 +1,61 @@
+Apa keuntungan menggunakan GIT?
+Mudah menghandel versi code 
+Support pararel development
+Split/Merge branch master/utama dengan branch feture/development
+Memudahkan kolaborasi antar Developer
+
+Apa yang dimaksud dengan “Staging Area” atau “Index” pada GIT ?
+Dengan adanya stagin area, maka developer nantinya akan dapat memformat commit atau bisa juga membuatnya agar dapat di review sebelum akhirnya diterapkan secara benar.
+
+Kapan `git stash` digunakan ?
+ketika developer harus pindah ke branch lain tanpa perlu melakukan commit di branchnya saat ini.
+
+Jelaskan Metode pembuatan Repositori yang biasa Anda gunakan.
+jika kerja sendiri hanya pakai branch master
+jika kerja tim
+branch master
+branch development
+branch nama feature/modul
+
+Kapan anda menggunakan Git Branch dan bagaimana format penamaanya ?
+jika kerja tim
+branch master
+branch development
+branch nama feature/modul
+
+Apa peruntukan Fork pada GIT ?
+ketika developer luar ingin membuat fitur baru dari repo yang sudah ada
+Mem-"fork" berarti menyalin sebuah project, mengubah namanya, serta membuat sebuah project/fitur baru salinannya.
+
+Bagaimana cara mengatasi Conflict pada Git ?
+riview dan merge secara manual
+
+Buat perbandingan Antara GITHUB, GITLAB dan BITBUCKET
+GitHub mendukung:
+- Impor Git, SVN, HG, TFS.
+
+GitLab mendukung:
+- Impor Git.
+-Mudah mengimpor dari layanan lain GitHub, Bitbucket, Google Code, Fogbugz.
+
+Bitbucket mendukung:
+- Impor Git, CodePlex, Google Code, HG, SourceForge, SVN.
+
+Jelaskan CI/CD menurut sepengetahuan Anda.
+CI/CD adalah penghubung antara tim operasional dan development dengan melakukan automasi pembangunan, testing, dan perilisan aplikasi. CI/CD juga berguna dalam membantu developer dan tester dalam melakukan rilis dan update aplikasi atau software.
+
+Jelaskan metode deploy yang Anda gunakan.
+saya biasa deploy aplikasi di vps server dengan sistem operasi BSD atau Linux family, yang terhubung dengan repo kode (gitlab/bitbucket).
+
+-----------------------------------------------
+aplikasi
+-----------------------------------------------
+- Jelaskan secara singkat (2 - 3 paragraf) arsitektur, prinsip, pendekatan, atau hal
+lainnya yang digunakan dalam pengembangan aplikasi ini.
+Aplikasi berbasis web pada back-end pakai Laravel dan pada Front-End pakai Vue.js, web responsive, arsitektur pakai repository pattern. Laravel versi 6 dengan package passport,spatie dan UI. NPM webpack, css bootsrap 4, sweetalert, axios, jquery, popper, lodash, fontawesome, moment, vform, sass loader, laravel mix.
+
+- Apa kekurangan dari aplikasi yang dibangun ini dalam beberapa aspek berikut :
+a. Fitur
+b. Performa
+c. Kualitas Kode
+all untuk app sekala kecil seperti ini tidak ada, tapi jika skala besar baiknya pisahkan code/repo backend dan front end agar mudah dalam development dan maintenance code.

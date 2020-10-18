@@ -9,7 +9,7 @@
     <body>
         @include('layouts.public.navbar')
 
-        <div class="container my-4">
+        <div id="app" class="container my-4">
             @yield('content')
         </div>
 

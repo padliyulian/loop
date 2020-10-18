@@ -17,7 +17,7 @@ Route::get('/', function () {
 // public post
 Route::get('/post', 'PostController@index')->name('post.list');
 Route::get('/post/{post}', 'PostController@detail')->name('post.detail');
-Route::get('/user', 'UserController@list')->name('user.list');
+// comment
 Route::get('/guest/comment', 'CommentController@guest')->name('comment.guest');
 
 Auth::routes();

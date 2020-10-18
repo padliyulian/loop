@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+// private api
+Route::group(['middleware' => 'auth:api', 'namespace' => 'Api\v1', 'prefix' => 'v1'], function(){
+    Route::group(['middleware' => ['role:admin|operator']], function () {
+        // user
+        Route::get('/user', 'UserController@list')->name('user.list');
+        Route::delete('/user/{user}', 'UserController@delete')->name('user.delete');
+    });
+}); 
