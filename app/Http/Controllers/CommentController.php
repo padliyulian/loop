@@ -17,7 +17,8 @@ class CommentController extends Controller
     public function guest()
     {
         try {
-            return $this->commentInterface->guest();
+            $comments = $this->commentInterface->guest();
+            return view('pages.public.post.guest', compact('comments'));
         } catch (\Exception $e) {
             return $e->getMessage();
         }

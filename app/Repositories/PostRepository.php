@@ -16,7 +16,7 @@ class PostRepository implements PostInterface
 
     public function list()
     {
-        
+        return $this->post->paginate(5);
     }
 
     public function detail($post)

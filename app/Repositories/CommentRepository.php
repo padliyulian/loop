@@ -16,6 +16,6 @@ class CommentRepository implements CommentInterface
 
     public function guest()
     {
-        return $this->comment->where('isUser', '=', '0')->get();
+        return $this->comment->where('isUser', '=', '0')->paginate(5);
     }
 }
